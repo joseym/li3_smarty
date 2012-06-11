@@ -1,13 +1,17 @@
 # [Smarty](http://www.smarty.net) PHP plugin for [Lithium PHP](http://lithify.me)
 Adds Smarty Templating Engine support to Lithium PHP Framework.
 
+I can't claim to be a fan of smarty, or php templating languages in general, but Smarty was a requirement from my employer.
+
+So, alas, here is a plugin to run lithium thru smarty properly.
+
 ## Installation
 There are several ways to grab and use this project:
 
 ### Clone directly
 1. Clone/Download the plugin into your app's ``libraries`` directory.
 
-2. This is great for development but will require you go to this directory and manually pull any future changes
+2. This is great for development but will require you go to this directory and manually pull any future changes 
 
 ### Create a Submodule
 In your app's ``libraries`` directory enter the following
@@ -85,7 +89,7 @@ The plugin was written to mimic core Li3 variable assignment - therefore you can
 __PagesController.php__
 
 ~~~ php
-<?php
+<?php 
 	...
 	class PagesController extends \lithium\action\Controller {
 
@@ -108,7 +112,7 @@ which will render "I want to display my `test variable!`"
 
 > You may have noticed that the view ended in .tpl, this is required for the plugin to parse the template as a smarty template.
 
-## Inheritance
+## Inheritance 
 Arguably one of the single most useful things smarty offers is its template inheritance.
 
 This plugin treats views as layouts, so your view will need to extend the proper layout in order for it to render properly.
@@ -207,7 +211,7 @@ I'm going to break the smarty helper method down for you
 That should do it, I've tested with a few different core helpers and it works as expected, please log an issue if a helper fails to work properly with this method and I'll attempt to add support as soon as possible.
 
 ## Use Elements
-Again, since Smarty makes it impossible to use PHP in templates this means that in order to call Lithium `elements` for use in a view powered by Smarty the element rendering methods needed to be exposed to smarty. Again, we do this by extending smarty thru a plugin function.
+Again, since Smarty makes it impossible to use PHP in templates this means that in order to call Lithium `elements` for use in a view powered by Smarty the element rendering methods needed to be exposed to smarty. Again, we do this by extending smarty thru a plugin function. 
 
 ### Element Usage
 
@@ -241,10 +245,6 @@ __Smarty Element__
 
 ## Collaborate
 As always, I welcome your collaboration to make things "even more betterer", so fork and contribute if you feel the need.
-
-### Contributors
-Original plugin developed by [Alex Denvir](https://github.com/alexdenvir), inspired by the [li3_twig](http://rad-dev.org/li3_twig).
-Massive improvements made by [Josey Morton](https://github.com/joseym)
 
 ### New to Smarty?
 Documentation available at http://www.smarty.net/docs/en/
